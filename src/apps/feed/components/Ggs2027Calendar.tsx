@@ -1,6 +1,7 @@
 import type { RefObject } from 'react';
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { MapPin } from 'lucide-react';
+import { CALENDAR_EVENTS, getCalendarEvent, isCalendarRedDate } from './ggs-calendar-dates';
 
 const YEAR = 2027;
 const assetBase = "/nempo-feed/";
@@ -73,13 +74,22 @@ export function Ggs2027Calendar({
             <div className="ggcal-dates">
               {getMonthDates(monthIndex).map((day, cellIndex) => (
                 <span key={`${month}-${cellIndex}`} aria-hidden={day === null}
-                  className={cellIndex % 7 === 0 ? 'ggcal-sunday' : ''}>{day}</span>
+                  title={getCalendarEvent(monthIndex, day)?.name}
+                  aria-label={day === null ? undefined : `${day} ${month}${getCalendarEvent(monthIndex, day) ? ` · ${getCalendarEvent(monthIndex, day)?.name}` : ''}`}
+                  className={`${isCalendarRedDate(monthIndex, day) ? 'ggcal-sunday' : ''} ${getCalendarEvent(monthIndex, day)?.holiday === false ? 'ggcal-commemoration' : ''}`}>{day}</span>
               ))}
+            </div>
+            <div className="ggcal-events">
+              {CALENDAR_EVENTS.filter(event => event.month === monthIndex)
+                .filter(event => !(event.month === 2 && event.day === 11))
+                .map(event => <span key={event.day} className={event.holiday ? 'ggcal-event-holiday' : 'ggcal-event-note'}><b>{event.month === 2 && event.day === 10 ? '10–11' : event.day}</b> {event.name}</span>)}
             </div>
           </section>
         ))}
       </div>
       <footer className="ggcal-footer">
+        <small className="ggcal-legend"><span>Merah: Minggu &amp; libur nasional</span><span>Garis bawah: hari peringatan (bukan libur)</span></small>
+        <small className="ggcal-source">Libur nasional: SKB 2027 · Idul Fitri &amp; Idul Adha mengikuti ketetapan Kemenag · Cuti bersama tidak ditampilkan</small>
         <div className="ggcal-contact-row">
           <a href="https://wa.me/6282342777723" target="_blank" rel="noopener noreferrer"><FaWhatsapp aria-hidden="true" />0823-4277-7723</a>
           <a href="https://www.instagram.com/ggsbeauty.hair.co/" target="_blank" rel="noopener noreferrer"><FaInstagram aria-hidden="true" />@ggsbeauty.hair.co</a>

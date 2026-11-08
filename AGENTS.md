@@ -35,4 +35,4 @@ use the editor.
 - NEMPO slide 37 plays its rendered activity MP4 through an asset pointer with pause/replay/audio controls and reduced-motion support; the same file is downloaded via a prefetched blob link and its first frame supplies the PNG cover, keeping preview and downloads identical.
 - Every `.asset.json` pointer must belong to this project (re-upload with `lovable-assets create` when copying from another project); why: hosted media URLs are project-scoped and 404 elsewhere.
 
-- GGS annual calendar keeps its 5:7 export artboard, UTC date calculation, and scoped ggcal styles with global palette tokens; why: print and preview must share the same legible twelve-month layout.
+- GGS annual calendar keeps its 5:7 export artboard, UTC date calculation, and scoped ggcal styles with global palette tokens; dated national holidays and non-holiday commemorations live in tested ggs-calendar-dates with official source citations, separately from optional collective leave; why: print and preview must share an accurate, legible twelve-month layout.
