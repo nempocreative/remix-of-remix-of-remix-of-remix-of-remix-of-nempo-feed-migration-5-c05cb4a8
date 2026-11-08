@@ -5,6 +5,51 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* GGS annual calendar: print-safe editorial composition and local brand tokens. */
+.ggcal-root {
+  --ggcal-paper: #fffafb;
+  --ggcal-ink: #342730;
+  --ggcal-primary: #973554;
+  --ggcal-muted: #77616b;
+  --ggcal-line: #ddc5cf;
+  --ggcal-soft: #f4e6ec;
+  --ggcal-secondary: #41685e;
+  --ggcal-shadow: 0 20px 60px color-mix(in srgb, var(--ggcal-ink) 16%, transparent);
+  position: relative; isolation: isolate; container-type: inline-size;
+  aspect-ratio: 5 / 7; height: min(92vh, 900px); width: auto; max-width: 100%;
+  display: flex; flex-direction: column; overflow: hidden;
+  padding: 4cqi; background: var(--ggcal-paper); color: var(--ggcal-ink);
+  font-family: 'DM Sans', sans-serif; box-shadow: var(--ggcal-shadow);
+}
+.ggcal-root * { letter-spacing: 0; box-sizing: border-box; }
+.ggcal-header { height: 15cqi; flex-shrink: 0; display: grid; grid-template-columns: 1fr 1.2fr 1fr; align-items: center; padding-bottom: 2.2cqi; }
+.ggcal-brand p { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 8cqi; line-height: 1; color: var(--ggcal-primary); }
+.ggcal-brand span { display: block; margin-top: 1cqi; font-family: 'DM Sans', sans-serif; font-size: 1.65cqi; font-weight: 600; text-transform: uppercase; }
+.ggcal-year { text-align: center; }
+.ggcal-year h1 { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 12.5cqi; line-height: .95; font-weight: 600; }
+.ggcal-year > span { display: block; margin-top: .8cqi; font-size: 1.4cqi; text-transform: uppercase; font-weight: 600; color: var(--ggcal-muted); }
+.ggcal-motto { margin: 0; text-align: right; font-family: 'Playfair Display', Georgia, serif; font-size: 3cqi; line-height: 1.25; color: var(--ggcal-secondary); }
+.ggcal-photos { height: 21cqi; flex-shrink: 0; display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: .7cqi; }
+.ggcal-photo { margin: 0; min-width: 0; height: 100%; overflow: hidden; background: var(--ggcal-soft); }
+.ggcal-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ggcal-photo-main img { object-position: 50% 62%; }
+.ggcal-photo-spa img { object-position: 60% 65%; }
+.ggcal-photo-salon img { object-position: 50% 78%; }
+.ggcal-photo-caption { display: flex; justify-content: space-between; padding: 1.1cqi 0 1.5cqi; font-size: 1.2cqi; text-transform: uppercase; color: var(--ggcal-muted); border-bottom: .18cqi solid var(--ggcal-primary); }
+.ggcal-months { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(4, minmax(0, 1fr)); gap: 2cqi 3cqi; padding-top: 2.3cqi; }
+.ggcal-month { display: flex; flex-direction: column; min-height: 0; min-width: 0; }
+.ggcal-month-heading { display: flex; align-items: center; justify-content: space-between; border-bottom: .12cqi solid var(--ggcal-line); padding-bottom: .7cqi; }
+.ggcal-month-heading h2 { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 2.7cqi; line-height: 1.2; font-weight: 600; }
+.ggcal-month-heading > span { font-size: 1.65cqi; font-weight: 500; color: var(--ggcal-secondary); font-variant-numeric: tabular-nums; }
+.ggcal-weekdays { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); margin: .85cqi 0 .4cqi; font-size: 1.2cqi; font-weight: 600; color: var(--ggcal-muted); text-align: center; }
+.ggcal-dates { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); grid-template-rows: repeat(6, minmax(0, 1fr)); }
+.ggcal-dates span { display: grid; place-items: center; font-size: 1.95cqi; line-height: 1; font-weight: 500; font-variant-numeric: tabular-nums; }
+.ggcal-sunday { color: var(--ggcal-primary); font-weight: 700 !important; }
+.ggcal-footer { display: flex; align-items: center; justify-content: space-between; gap: 1cqi; padding-top: 1.3cqi; margin-top: 1.6cqi; border-top: .18cqi solid var(--ggcal-primary); flex-shrink: 0; }
+.ggcal-footer span { font-size: 1.1cqi; color: var(--ggcal-muted); }
+.ggcal-footer p { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 2cqi; font-style: italic; color: var(--ggcal-primary); }
+@media (max-width: 640px) { .ggcal-root { height: auto; width: 100%; } }
+
 /* GGS open slide: shared brand palette, separate from other feeds. */
 .ggl-root {
   --ggl-ink: #4a0e33;
