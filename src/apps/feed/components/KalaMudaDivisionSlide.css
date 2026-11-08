@@ -9,8 +9,8 @@
 .kmd-doodles path, .kmd-doodles circle { stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
 .kmd-doodle-trail { right: 9cqw; bottom: 1.5cqw; width: 9cqw; height: 15cqw; }
 .kmd-doodle-trail path { stroke-dasharray: 2px 5px; }
-.kmd-root .kmd-doodle-icon { position: absolute; right: 4.5cqw; bottom: 15.5cqw; width: 10cqw; height: 10cqw; transform: rotate(-12deg); }
-.kmd-doodle-spark { right: 13.5cqw; bottom: 24.5cqw; width: 3.4cqw; height: 3.4cqw; transform: rotate(160deg); }
+.kmd-root .kmd-doodle-icon { position: absolute; right: 4.5cqw; bottom: 14.5cqw; width: 12cqw; height: 12cqw; transform: rotate(-12deg); }
+.kmd-doodle-spark { right: 15cqw; bottom: 25.5cqw; width: 3.4cqw; height: 3.4cqw; transform: rotate(160deg); }
 .kmd-doodle-loop { left: 3cqw; bottom: 3cqw; width: 19cqw; height: 8.6cqw; }
 .kmd-doodle-loop circle { fill: var(--kmd-accent); stroke: none; }
 
