@@ -21,7 +21,7 @@ import ggsOpenHoursVideo from '@/assets/ggs-feed-23-open-hours.mp4.asset.json';
 import ggsContactPng from '@/assets/ggs-feed-24-customer-service.png.asset.json';
 import ggsPromoNailPng from '@/assets/ggs-feed-25-promo-nail-art.png.asset.json';
 import ggsKidTreatmentPng from '@/assets/ggs-feed-26-kids-hair-treatment.png.asset.json';
-import ggsPahlawanPromoVideo from '@/assets/ggs-feed-27-promo-hari-pahlawan.mp4.asset.json';
+import ggsPahlawanPromoVideo from '@/assets/ggs-feed-27-pahlawan-slideshow.mp4.asset.json';
 import ggsStoryCoverPng from '@/assets/ggs-story-04-peduli-penampilan.png.asset.json';
 import ggsStoryCoverCenteredPng from '@/assets/ggs-story-05-peduli-penampilan-feed.png.asset.json';
 import ggsPromoSpesialPng from '@/assets/ggs-feed-11-promo-spesial.png';
@@ -3332,7 +3332,7 @@ function App() {
               <>
                 <PrebuiltVideoDownload src={ggsPahlawanPromoVideo.url} fileName="GGS-Feed-27-Promo-Hari-Pahlawan.mp4" />
                 <p className="max-w-[92vw] text-center text-[10px] font-medium text-slate-600">
-                  Video 8 detik · 1440×1920 · dengan suara, persis seperti pratinjau.
+                  Video 15 detik · 1440×1920 · tanpa suara, persis seperti pratinjau.
                 </p>
               </>
             ) : activeFeed === 'client' && (activeClientSlide === 21 || activeClientSlide === 22 || activeClientSlide === 23) ? (
