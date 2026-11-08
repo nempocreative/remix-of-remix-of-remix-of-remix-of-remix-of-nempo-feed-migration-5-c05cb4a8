@@ -9,7 +9,8 @@
 - [x] Foto stylist berhijab (IMG_2709) pakai baju guru bawa alat salon
 - [x] Foto stylist (IMG_2708) pakai baju dokter bawa alat salon
 - [x] Foto stylist (IMG_2711) pakai baju bidan bawa alat salon
-- [ ] Video guru, dokter & bidan / pasang fotonya di slide (tunggu pilihan owner + kredit)
+- [x] Foto stylist (IMG_2707) pakai baju polwan bawa alat salon
+- [ ] Video guru, dokter, bidan & polwan / pasang fotonya di slide (tunggu pilihan owner + kredit)
 - [x] NEMPO slide 37: ganti kolase dengan video animasi lima kegiatan, sampul penuh, dan unduhan sesuai preview.
 - [x] NEMPO slide 37: empat foto kiriman ditambahkan; video 28 detik memuat sembilan foto, sampul penuh, tampilan desktop/ponsel dan kedua unduhan teruji sesuai berkas baru.
 - [ ] NEMPO slide 37: ganti judul kegiatan 7 menjadi Band Kala Muda, hapus seluruh ikon bintang, rapikan ikon pembuka, dan perbarui video serta sampul.
