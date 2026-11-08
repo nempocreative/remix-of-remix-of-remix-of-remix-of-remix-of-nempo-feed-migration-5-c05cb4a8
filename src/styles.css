@@ -7,12 +7,12 @@
 
 /* GGS annual calendar: print-safe editorial composition and local brand tokens. */
 .ggcal-root {
-  --ggcal-paper: #fffafb;
+  --ggcal-paper: #f6cddd;
   --ggcal-ink: #342730;
   --ggcal-primary: #973554;
-  --ggcal-muted: #77616b;
-  --ggcal-line: #ddc5cf;
-  --ggcal-soft: #f4e6ec;
+  --ggcal-muted: #68505c;
+  --ggcal-line: #ce9cb1;
+  --ggcal-soft: #efb9cf;
   --ggcal-secondary: #41685e;
   --ggcal-shadow: 0 20px 60px color-mix(in srgb, var(--ggcal-ink) 16%, transparent);
   position: relative; isolation: isolate; container-type: inline-size;
