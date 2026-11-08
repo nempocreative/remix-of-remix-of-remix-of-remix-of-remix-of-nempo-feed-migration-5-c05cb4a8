@@ -43,8 +43,8 @@
 .ggph-fill-4{animation:ggph-f4 15s linear infinite}
 .ggph-captions{position:absolute;z-index:5;left:8cqw;right:4cqw;bottom:6cqw;height:6.4cqw}
 .ggph-cap{position:absolute;inset:auto 0 0 0;margin:0;display:flex;flex-direction:column;gap:.6cqw;opacity:0;animation:ggph-cap 15s linear infinite;color:var(--ggph-ink);flex-direction:row;align-items:baseline;gap:2cqw}
-.ggph-cap b{color:var(--ggph-primary);font-size:1.7cqw;font-weight:700;letter-spacing:.4cqw}
-.ggph-cap span{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:4.2cqw;line-height:1.05;white-space:nowrap}
+.ggph-cap b{white-space:nowrap;color:var(--ggph-primary);font-size:1.7cqw;font-weight:700;letter-spacing:.4cqw}
+.ggph-cap span{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:3.4cqw;line-height:1.05;white-space:nowrap}
 @keyframes ggph-cap{0%,3%{opacity:0;transform:translateY(1.6cqw)}8%{opacity:1;transform:none}18%{opacity:1;transform:none}20%,100%{opacity:0;transform:translateY(-1cqw)}}
 @keyframes ggph-hl{0%{color:var(--ggph-ink)}3%,18%{color:var(--ggph-primary)}21%,100%{color:var(--ggph-ink)}}
 @media (prefers-reduced-motion:reduce){.ggph-shot,.ggph-cap,.ggph-list li,.ggph-fill{animation:none}.ggph-shot:first-child,.ggph-cap:first-child{opacity:1}}
