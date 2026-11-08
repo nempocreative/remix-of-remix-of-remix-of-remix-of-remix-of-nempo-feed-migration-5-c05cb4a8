@@ -18,3 +18,5 @@
 - [x] NEMPO slide 38–43: penjelasan detail tiap divisi Kala Muda (satu divisi per slide) dengan unduhan PNG tajam.
 - [x] NEMPO slide 38–43: ganti foto orang dengan ilustrasi lukisan per divisi, unduhan PNG dibuat ulang.
 - [x] NEMPO slide 38–43: latar ilustrasi lukisan + doodle kreatif (tidak polos), unduhan PNG dibuat ulang.
+
+- [ ] GGS slide 27: five cut-out photos (no salon background), new composition, MP4 download
