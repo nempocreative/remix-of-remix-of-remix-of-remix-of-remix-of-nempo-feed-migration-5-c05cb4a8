@@ -1,24 +1,24 @@
 import type { RefObject } from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import teamMember03 from '@/assets/team/team-member-03.jpg';
-import teamMember05 from '@/assets/team/team-member-05.jpg';
-import teamMember10 from '@/assets/team/team-member-10.jpg';
-import teamMember12 from '@/assets/team/team-member-12.jpg';
-import teamMember14 from '@/assets/team/team-member-14.jpg';
-import teamMember16 from '@/assets/team/team-member-16.jpg';
+import paintingDesigner from '@/assets/divisions/divisi-designer-painting.jpg';
+import paintingWebDeveloper from '@/assets/divisions/divisi-web-developer-painting.jpg';
+import paintingContentCreator from '@/assets/divisions/divisi-content-creator-painting.jpg';
+import paintingVideoPhoto from '@/assets/divisions/divisi-videografer-fotografer-painting.jpg';
+import paintingMarketing from '@/assets/divisions/divisi-marketing-painting.jpg';
+import paintingEvent from '@/assets/divisions/divisi-event-management-painting.jpg';
 import { NempoFooter, NempoHeader } from './KalaMudaRecruitSlide';
 import { KALA_MUDA_DIVISIONS, type KalaMudaDivision } from './kala-muda-divisions';
 import './KalaMudaRecruitSlide.css';
 import './KalaMudaDivisionSlide.css';
 
-/** Website team portraits paired with each division, by the member's listed field. */
-const PHOTOS: Record<KalaMudaDivision['name'], string> = {
-  Designer: teamMember05,
-  'Web Developer': teamMember10,
-  'Content Creator': teamMember16,
-  'Videografer & Fotografer': teamMember14,
-  Marketing: teamMember03,
-  'Event Management': teamMember12,
+/** Painted still-life illustration per division (tools of the trade, no people). */
+const PAINTINGS: Record<KalaMudaDivision['name'], string> = {
+  Designer: paintingDesigner,
+  'Web Developer': paintingWebDeveloper,
+  'Content Creator': paintingContentCreator,
+  'Videografer & Fotografer': paintingVideoPhoto,
+  Marketing: paintingMarketing,
+  'Event Management': paintingEvent,
 };
 
 /** Nempo Feed slides 38–43: one Kala Muda division explained per slide. */
@@ -59,7 +59,7 @@ export function KalaMudaDivisionSlide({
             <p className="kmd-fit">Cocok buat kamu yang {division.fit}</p>
           </div>
           <figure className="kmd-photo">
-            <img src={PHOTOS[division.name]} alt="" width={768} height={1024} draggable={false} />
+            <img src={PAINTINGS[division.name]} alt="" width={768} height={1024} draggable={false} />
             <figcaption className="kmd-cta">
               <span>Daftar di</span>
               <strong>nempogarut.com</strong>
