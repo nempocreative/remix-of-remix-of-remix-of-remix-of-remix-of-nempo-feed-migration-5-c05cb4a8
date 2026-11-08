@@ -143,6 +143,15 @@ import { GgsServicesSlide, GGS_SERVICES_SLIDES } from './components/GgsServicesS
 import { GgsRatusPromoSlide } from './components/GgsRatusPromoSlide';
 import { KalaMudaRecruitSlide } from './components/KalaMudaRecruitSlide';
 import { KalaMudaActivitiesSlide } from './components/KalaMudaActivitiesSlide';
+import { KalaMudaDivisionSlide } from './components/KalaMudaDivisionSlide';
+import { DIVISION_SLIDES, divisionForSlide } from './components/kala-muda-divisions';
+import divisionPng38 from '@/assets/nempo-feed-38-divisi-designer.png.asset.json';
+import divisionPng39 from '@/assets/nempo-feed-39-divisi-web-developer.png.asset.json';
+import divisionPng40 from '@/assets/nempo-feed-40-divisi-content-creator.png.asset.json';
+import divisionPng41 from '@/assets/nempo-feed-41-divisi-videografer-fotografer.png.asset.json';
+import divisionPng42 from '@/assets/nempo-feed-42-divisi-marketing.png.asset.json';
+import divisionPng43 from '@/assets/nempo-feed-43-divisi-event-management.png.asset.json';
+const DIVISION_PNGS: Partial<Record<number, string>> = {38: divisionPng38.url, 39: divisionPng39.url, 40: divisionPng40.url, 41: divisionPng41.url, 42: divisionPng42.url, 43: divisionPng43.url};
 
 const SpreadsheetViewer = lazy(async () => {
   const module = await import('./components/SpreadsheetViewer');
@@ -187,7 +196,13 @@ type FeedSlide =
   | 34
   | 35
   | 36
-  | 37;
+  | 37
+  | 38
+  | 39
+  | 40
+  | 41
+  | 42
+  | 43;
 
 type ClientSlide = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26;
 
@@ -2802,7 +2817,7 @@ function App() {
   const exportRef = useRef<HTMLElement | null>(null);
   const isNempoFeed = activeFeed === 'nempo';
   const isHighQualityNempoStorySlide =
-    isNempoFeed && activeSlide >= 20 && activeSlide <= 37;
+    isNempoFeed && activeSlide >= 20 && activeSlide <= 43;
   const isCoupon = activeFeed === 'coupon';
   const isQCard = activeFeed === 'qcard';
   const isRundown = activeFeed === 'rundown';
@@ -2941,7 +2956,7 @@ function App() {
           highQualityCanvas.height,
         );
         renderedCanvas = highQualityCanvas;
-      } else if (isNempoFeed && (activeSlide === 30 || activeSlide === 31 || activeSlide === 32 || activeSlide === 33 || activeSlide === 34 || activeSlide === 35 || activeSlide === 36 || activeSlide === 37)) {
+      } else if (isNempoFeed && (activeSlide === 30 || activeSlide === 31 || activeSlide === 32 || activeSlide === 33 || activeSlide === 34 || activeSlide === 35 || activeSlide === 36 || activeSlide === 37 || activeSlide >= 38)) {
         const artworkWidth = artwork.getBoundingClientRect().width;
         const scale = (outputWidth / artworkWidth) * renderScale;
         renderedCanvas = await domToCanvas(artwork, {
@@ -3106,7 +3121,7 @@ function App() {
       ? isGgsStory
         ? [1, 2, 3, 4, 5]
         : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
-      : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37];
+      : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, ...DIVISION_SLIDES];
   const selectedSlide =
     isGgsFeed ? activeClientSlide : activeSlide;
 
@@ -3361,6 +3376,19 @@ function App() {
                   PNG {activeClientSlide === 25 || activeClientSlide === 26 ? "1440×1920, teks tajam" : "3240×4320"}. Di iPad/iPhone pilih “Simpan Gambar” atau “Simpan ke File”; jika gambar terbuka, tekan lama lalu Simpan.
                 </p>
               </>
+            ) : isNempoFeed && DIVISION_PNGS[activeSlide] ? (
+              <>
+                <PrebuiltPngDownload
+                  key={`nempo-feed-${activeSlide}`}
+                  src={DIVISION_PNGS[activeSlide]!}
+                  fileName={`Nempo-Feed-Slide-${activeSlide}-Divisi-${divisionForSlide(activeSlide)!.name.replace(/ & /g, '-').replace(/ /g, '-')}.png`}
+                  label="Download PNG · 3×"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#062f4d] px-4 py-2 text-[11px] font-black text-white shadow-[0_8px_20px_rgba(0,40,78,0.2)] transition-colors hover:bg-[#0b4d69] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffdd00] focus-visible:ring-offset-2"
+                />
+                <p className="max-w-[92vw] text-center text-[10px] font-medium text-slate-600">
+                  PNG 3240×4320, teks tajam. Di iPad/iPhone pilih “Simpan Gambar” atau “Simpan ke File”.
+                </p>
+              </>
             ) : isNempoFeed && activeSlide === 37 ? (
               <PrebuiltPngDownload
                 key="nempo-feed-37"
@@ -3415,7 +3443,7 @@ function App() {
                   ? 'Menyiapkan PNG…'
                   : isCalendar
                     ? 'Download PNG · 50×70 cm'
-                    : isNempoFeed && (activeSlide === 30 || activeSlide === 31 || activeSlide === 32 || activeSlide === 33 || activeSlide === 34 || activeSlide === 35 || activeSlide === 36 || activeSlide === 37)
+                    : isNempoFeed && (activeSlide === 30 || activeSlide === 31 || activeSlide === 32 || activeSlide === 33 || activeSlide === 34 || activeSlide === 35 || activeSlide === 36 || activeSlide === 37 || activeSlide >= 38)
                       ? 'Download PNG · 3×'
                     : isPhotobooth || isGgsFeed || isHighQualityNempoStorySlide
                       ? 'Download PNG · 3×'
@@ -3517,6 +3545,8 @@ function App() {
             isStory={isGgsStory}
             slide={activeClientSlide}
           />
+        ) : isNempoFeed && divisionForSlide(activeSlide) ? (
+          <KalaMudaDivisionSlide key={activeSlide} division={divisionForSlide(activeSlide)!} exportRef={exportRef} />
         ) : isNempoFeed && activeSlide === 37 ? (
           <KalaMudaActivitiesSlide exportRef={exportRef} />
         ) : isNempoFeed && (activeSlide === 35 || activeSlide === 36) ? (

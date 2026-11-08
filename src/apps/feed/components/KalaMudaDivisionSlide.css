@@ -1,0 +1,58 @@
+/* Nempo Feed slides 38–43: one Kala Muda division per slide, on the slide 35–36 look. */
+.kmd-root .kmt-ring-b { animation: none; }
+.kmd-bignum {
+  position: absolute; right: -3cqw; top: 14cqw; font-size: 46cqw; font-weight: 900; line-height: 1;
+  color: transparent; -webkit-text-stroke: .35cqw var(--kmt-line); letter-spacing: -.04em !important;
+}
+.kmd-body {
+  position: absolute; z-index: 2; top: 18.5cqw; bottom: 15cqw; left: 7cqw; right: 7cqw;
+  display: flex; flex-direction: column; justify-content: space-between; gap: 1cqw; color: var(--kmt-text);
+}
+.kmd-hero { display: flex; align-items: center; gap: 3.4cqw; }
+.kmd-icon {
+  flex: none; display: flex; align-items: center; justify-content: center; width: 16cqw; height: 16cqw;
+  border-radius: 4cqw; background: var(--kmr-accent); color: var(--kmr-ink);
+  box-shadow: 0 1.6cqw 4cqw color-mix(in srgb, #022038 45%, transparent);
+  transform: rotate(-6deg);
+}
+.kmd-icon svg { width: 8.6cqw; height: 8.6cqw; }
+.kmd-hero-text { display: flex; flex-direction: column; gap: .9cqw; min-width: 0; }
+.kmd-kicker { font-size: 2.1cqw; font-weight: 800; text-transform: uppercase; letter-spacing: .18em !important; color: var(--kmr-accent); }
+.kmd-name { font-size: 6.2cqw; font-weight: 900; line-height: 1.02; text-shadow: 0 .6cqw 2.4cqw color-mix(in srgb, #022038 45%, transparent); }
+.kmd-tagline { font-size: 2.55cqw; font-weight: 500; line-height: 1.3; color: color-mix(in srgb, var(--kmt-text) 88%, transparent); }
+
+.kmd-card {
+  padding: 2.4cqw 2.8cqw; border-radius: 2.6cqw;
+  background: color-mix(in srgb, #062f4d 55%, transparent);
+  border: 1px solid var(--kmt-line-strong);
+}
+.kmd-head {
+  display: flex; align-items: center; gap: 1.2cqw; margin-bottom: 1.5cqw !important;
+  font-size: 2.3cqw; font-weight: 800; text-transform: uppercase; letter-spacing: .14em !important; color: var(--kmr-accent);
+}
+.kmd-head svg { width: 2.8cqw; height: 2.8cqw; }
+.kmd-tasks { display: flex; flex-direction: column; gap: 1.2cqw; list-style: none; margin: 0; padding: 0; }
+.kmd-tasks li { display: flex; align-items: center; gap: 2cqw; font-size: 2.65cqw; font-weight: 600; line-height: 1.25; }
+.kmd-check {
+  flex: none; display: flex; align-items: center; justify-content: center; width: 4cqw; height: 4cqw;
+  border-radius: 99px; background: var(--kmr-accent); color: var(--kmr-ink);
+}
+.kmd-check svg { width: 2.4cqw; height: 2.4cqw; }
+
+.kmd-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2cqw; }
+.kmd-cols .kmd-card { padding: 2cqw 2.2cqw; }
+.kmd-chips { display: flex; flex-wrap: wrap; gap: .8cqw; }
+.kmd-chip {
+  display: inline-flex; padding: .75cqw 1.7cqw; border-radius: 99px; white-space: nowrap;
+  background: color-mix(in srgb, #ffffff 14%, transparent); border: 1px solid color-mix(in srgb, #ffffff 30%, transparent);
+  font-size: 2.15cqw; font-weight: 700;
+}
+.kmd-chip-tool { background: color-mix(in srgb, #ffdd00 14%, transparent); border-color: color-mix(in srgb, #ffdd00 45%, transparent); }
+
+.kmd-root .kmd-fit { font-size: 2.55cqw; font-weight: 500; line-height: 1.35; text-align: center; padding: 0 2cqw; }
+.kmd-fit strong { color: var(--kmr-accent); font-weight: 800; }
+.kmd-root .kmd-cta {
+  align-self: center; padding: 1.7cqw 4.4cqw; border-radius: 99px; background: var(--kmr-accent); color: var(--kmr-ink);
+  font-size: 2.8cqw; font-weight: 700; box-shadow: 0 1.6cqw 4cqw color-mix(in srgb, #022038 40%, transparent);
+}
+.kmd-cta strong { font-weight: 900; }

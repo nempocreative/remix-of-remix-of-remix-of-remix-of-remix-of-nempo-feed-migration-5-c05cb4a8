@@ -8,3 +8,4 @@
 - [x] NEMPO slide 37: empat foto kiriman ditambahkan; video 28 detik memuat sembilan foto, sampul penuh, tampilan desktop/ponsel dan kedua unduhan teruji sesuai berkas baru.
 - [ ] NEMPO slide 37: ganti judul kegiatan 7 menjadi Band Kala Muda, hapus seluruh ikon bintang, rapikan ikon pembuka, dan perbarui video serta sampul.
 - [x] NEMPO slide 37: ganti Dapoer Nyunda menjadi Review Makanan dan Good Story Cafe menjadi Meeting Client di video, sampul, serta unduhan.
+- [x] NEMPO slide 38–43: penjelasan detail tiap divisi Kala Muda (satu divisi per slide) dengan unduhan PNG tajam.
