@@ -21,3 +21,5 @@
 
 - [x] GGS slide 27: five cut-out photos (no salon background), new composition, MP4 download
 - [x] GGS slide 27: half-body cut-outs with soft bottom fade
+- [x] GGS slide 27: modest polwan uniform
+- [x] GGS slide 27: remove flag, themed background
