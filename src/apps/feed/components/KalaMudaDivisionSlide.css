@@ -1,6 +1,7 @@
 /* Nempo Feed slides 38–43: editorial division posters (one division per slide). */
 .kmd-root { background: var(--kmd-bg); color: var(--kmd-text); }
-.kmd-glow { position: absolute; inset: 0; z-index: 0; background: var(--kmd-glow); pointer-events: none; }
+.kmd-root .kmd-backdrop { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.kmd-glow { position: absolute; inset: 0; z-index: 0; background: var(--kmd-scrim), var(--kmd-glow); pointer-events: none; }
 
 /* Hero: text left, painted illustration right */
 .kmd-hero { position: absolute; z-index: 2; top: 20cqw; left: 7.5cqw; right: 7.5cqw; height: 47cqw; display: flex; gap: 4cqw; }

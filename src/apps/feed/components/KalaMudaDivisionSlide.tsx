@@ -6,6 +6,7 @@ import paintingContentCreator from '@/assets/divisions/divisi-content-creator-pa
 import paintingVideoPhoto from '@/assets/divisions/divisi-videografer-fotografer-painting.jpg';
 import paintingMarketing from '@/assets/divisions/divisi-marketing-painting.jpg';
 import paintingEvent from '@/assets/divisions/divisi-event-management-painting.jpg';
+import paintedBackdrop from '@/assets/divisions/divisi-background-painting.jpg';
 import { NempoFooter, NempoHeader } from './KalaMudaRecruitSlide';
 import { KALA_MUDA_DIVISIONS, type KalaMudaDivision } from './kala-muda-divisions';
 import './KalaMudaRecruitSlide.css';
@@ -41,6 +42,7 @@ export function KalaMudaDivisionSlide({
         role="img"
         aria-label={`Divisi ${number} dari ${total}: ${division.name}. ${division.tagline} Tanggung jawab: ${division.tasks.join('; ')}. Skill: ${division.skills.join(', ')}. Tools: ${division.tools.join(', ')}. Cocok buat kamu yang ${division.fit} Daftar di www.nempogarut.com.`}
       >
+        <img className="kmd-backdrop" src={paintedBackdrop} alt="" aria-hidden="true" width={1088} height={1440} draggable={false} />
         <span className="kmd-glow" aria-hidden="true" />
         <NempoHeader badge="OPEN RECRUITMENT" />
 
