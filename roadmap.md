@@ -10,3 +10,4 @@
 - [x] NEMPO slide 37: ganti Dapoer Nyunda menjadi Review Makanan dan Good Story Cafe menjadi Meeting Client di video, sampul, serta unduhan.
 - [x] NEMPO slide 38–43: penjelasan detail tiap divisi Kala Muda (satu divisi per slide) dengan unduhan PNG tajam.
 - [x] NEMPO slide 38–43: ganti foto orang dengan ilustrasi lukisan per divisi, unduhan PNG dibuat ulang.
+- [x] NEMPO slide 38–43: latar ilustrasi lukisan + doodle kreatif (tidak polos), unduhan PNG dibuat ulang.
