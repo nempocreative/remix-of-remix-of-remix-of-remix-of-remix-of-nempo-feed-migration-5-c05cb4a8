@@ -1,17 +1,24 @@
 import type { RefObject } from 'react';
-import { CalendarCheck, Camera, Check, Code2, Megaphone, Palette, Sparkles, Wrench, Zap, type LucideIcon } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
+import teamMember03 from '@/assets/team/team-member-03.jpg';
+import teamMember05 from '@/assets/team/team-member-05.jpg';
+import teamMember10 from '@/assets/team/team-member-10.jpg';
+import teamMember12 from '@/assets/team/team-member-12.jpg';
+import teamMember14 from '@/assets/team/team-member-14.jpg';
+import teamMember16 from '@/assets/team/team-member-16.jpg';
 import { NempoFooter, NempoHeader } from './KalaMudaRecruitSlide';
-import { KALA_MUDA_DIVISIONS, type KalaMudaDivision, type KalaMudaDivisionIcon } from './kala-muda-divisions';
+import { KALA_MUDA_DIVISIONS, type KalaMudaDivision } from './kala-muda-divisions';
 import './KalaMudaRecruitSlide.css';
 import './KalaMudaDivisionSlide.css';
 
-const ICONS: Record<KalaMudaDivisionIcon, LucideIcon> = {
-  palette: Palette,
-  code: Code2,
-  sparkles: Sparkles,
-  camera: Camera,
-  megaphone: Megaphone,
-  calendar: CalendarCheck,
+/** Website team portraits paired with each division, by the member's listed field. */
+const PHOTOS: Record<KalaMudaDivision['name'], string> = {
+  Designer: teamMember05,
+  'Web Developer': teamMember10,
+  'Content Creator': teamMember16,
+  'Videografer & Fotografer': teamMember14,
+  Marketing: teamMember03,
+  'Event Management': teamMember12,
 };
 
 /** Nempo Feed slides 38–43: one Kala Muda division explained per slide. */
@@ -25,65 +32,65 @@ export function KalaMudaDivisionSlide({
   const index = KALA_MUDA_DIVISIONS.indexOf(division);
   const number = String(index + 1).padStart(2, '0');
   const total = String(KALA_MUDA_DIVISIONS.length).padStart(2, '0');
-  const Icon = ICONS[division.icon];
+  const [first, ...rest] = division.name.split(' ');
   return (
     <div className="w-full max-w-[430px]">
       <div
         ref={exportRef as RefObject<HTMLDivElement | null>}
         className="kmr-root kmt-root kmd-root"
         role="img"
-        aria-label={`Divisi ${number} dari ${total}: ${division.name}. ${division.tagline} Yang kamu kerjakan: ${division.tasks.join('; ')}. Skill: ${division.skills.join(', ')}. Tools: ${division.tools.join(', ')}. Cocok buat kamu yang ${division.fit} Daftar di www.nempogarut.com.`}
+        aria-label={`Divisi ${number} dari ${total}: ${division.name}. ${division.tagline} Tanggung jawab: ${division.tasks.join('; ')}. Skill: ${division.skills.join(', ')}. Tools: ${division.tools.join(', ')}. Cocok buat kamu yang ${division.fit} Daftar di www.nempogarut.com.`}
       >
-        <div className="kmt-bg" aria-hidden="true">
-          <span className="kmt-grid" />
-          <span className="kmt-ring kmt-ring-a" />
-          <span className="kmt-ring kmt-ring-b" />
-          <span className="kmt-band" />
-          <span className="kmd-bignum">{number}</span>
-        </div>
-        <NempoHeader badge={`DIVISI ${number}/${total}`} />
-        <div className="kmd-body" aria-hidden="true">
-          <div className="kmd-hero">
-            <span className="kmd-icon"><Icon strokeWidth={2.2} /></span>
-            <div className="kmd-hero-text">
-              <span className="kmd-kicker">Divisi Kala Muda</span>
-              <h2 className="kmd-name">{division.name}</h2>
-              <p className="kmd-tagline">{division.tagline}</p>
-            </div>
+        <span className="kmd-glow" aria-hidden="true" />
+        <NempoHeader badge="OPEN RECRUITMENT" />
+
+        <div className="kmd-hero" aria-hidden="true">
+          <div className="kmd-hero-text">
+            <span className="kmd-label">
+              <b>Divisi {number}</b>
+              <i />
+              {total}
+            </span>
+            <h2 className="kmd-name">
+              {first}
+              {rest.length > 0 && <><br />{rest.join(' ')}</>}
+            </h2>
+            <p className="kmd-tagline">{division.tagline}</p>
+            <p className="kmd-fit">Cocok buat kamu yang {division.fit}</p>
           </div>
-
-          <section className="kmd-card">
-            <h3 className="kmd-head"><Zap /> Yang kamu kerjakan</h3>
-            <ul className="kmd-tasks">
-              {division.tasks.map((task) => (
-                <li key={task}>
-                  <span className="kmd-check"><Check strokeWidth={3} /></span>
-                  <span>{task}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <div className="kmd-cols">
-            <section className="kmd-card">
-              <h3 className="kmd-head"><Sparkles /> Skill</h3>
-              <div className="kmd-chips">
-                {division.skills.map((skill) => <span key={skill} className="kmd-chip">{skill}</span>)}
-              </div>
-            </section>
-            <section className="kmd-card">
-              <h3 className="kmd-head"><Wrench /> Tools</h3>
-              <div className="kmd-chips">
-                {division.tools.map((tool) => <span key={tool} className="kmd-chip kmd-chip-tool">{tool}</span>)}
-              </div>
-            </section>
-          </div>
-
-          <p className="kmd-fit">
-            <strong>Cocok buat kamu yang</strong> {division.fit}
-          </p>
-          <p className="kmd-cta">Daftar di <strong>www.nempogarut.com</strong></p>
+          <figure className="kmd-photo">
+            <img src={PHOTOS[division.name]} alt="" width={768} height={1024} draggable={false} />
+            <figcaption className="kmd-cta">
+              <span>Daftar di</span>
+              <strong>nempogarut.com</strong>
+              <ArrowUpRight strokeWidth={2.4} />
+            </figcaption>
+          </figure>
         </div>
+
+        <section className="kmd-section kmd-tasks-wrap" aria-hidden="true">
+          <h3 className="kmd-head">Tanggung jawab</h3>
+          <ol className="kmd-tasks">
+            {division.tasks.map((task, i) => (
+              <li key={task}>
+                <span className="kmd-num">{String(i + 1).padStart(2, '0')}</span>
+                <span>{task}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <div className="kmd-section kmd-meta" aria-hidden="true">
+          <div>
+            <h3 className="kmd-head">Skill</h3>
+            <ul className="kmd-list">{division.skills.map((skill) => <li key={skill}>{skill}</li>)}</ul>
+          </div>
+          <div>
+            <h3 className="kmd-head">Tools</h3>
+            <ul className="kmd-list">{division.tools.map((tool) => <li key={tool}>{tool}</li>)}</ul>
+          </div>
+        </div>
+
         <NempoFooter />
       </div>
     </div>
