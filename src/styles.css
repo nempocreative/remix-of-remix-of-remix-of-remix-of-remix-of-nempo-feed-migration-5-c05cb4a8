@@ -55,7 +55,7 @@
 .ggcal-legend { display: flex; gap: 3cqi; font-size: 1.15cqi; color: var(--ggcal-muted); }
 .ggcal-legend span:first-child { color: var(--ggcal-primary); }
 .ggcal-source { font-size: .95cqi; text-align: center; color: var(--ggcal-muted); line-height: 1.4; }
-.ggcal-footer { display: flex; flex-direction: column; align-items: center; gap: .75cqi; padding-top: 1.3cqi; margin-top: 1.6cqi; border-top: .18cqi solid var(--ggcal-primary); flex-shrink: 0; }
+.ggcal-footer { display: flex; flex-direction: column; align-items: center; gap: .75cqi; padding: 1.3cqi .5cqi .8cqi; margin-top: 1.6cqi; border-top: .18cqi solid var(--ggcal-primary); background: var(--ggcal-date-paper); flex-shrink: 0; }
 .ggcal-contact-row { display: flex; align-items: center; justify-content: center; gap: 5cqi; }
 .ggcal-contact-row a { display: flex; align-items: center; gap: .75cqi; color: var(--ggcal-ink); text-decoration: none; font-size: 1.9cqi; font-weight: 600; }
 .ggcal-contact-row a:first-child svg { color: var(--ggcal-secondary); }
