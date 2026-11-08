@@ -16,7 +16,7 @@
   --ggcal-soft: #efb9cf;
   --ggcal-secondary: #41685e;
   --ggcal-shadow: 0 20px 60px color-mix(in srgb, var(--ggcal-ink) 16%, transparent);
-  --ggcal-background-wash: color-mix(in srgb, var(--ggcal-paper) 58%, transparent);
+  --ggcal-background-wash: transparent;
   position: relative; isolation: isolate; container-type: inline-size;
   aspect-ratio: 5 / 7; height: min(92vh, 900px); width: auto; max-width: 100%;
   display: flex; flex-direction: column; overflow: hidden;
@@ -24,7 +24,7 @@
   font-family: 'DM Sans', sans-serif; box-shadow: var(--ggcal-shadow);
 }
 .ggcal-root * { letter-spacing: 0; box-sizing: border-box; }
-.ggcal-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.5); z-index: -2; }
+.ggcal-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.3); mix-blend-mode: multiply; z-index: -2; }
 .ggcal-background-wash { position: absolute; inset: 0; background: var(--ggcal-background-wash); z-index: -1; }
 .ggcal-header { height: 15cqi; flex-shrink: 0; display: grid; grid-template-columns: 1fr 1.2fr 1fr; align-items: center; padding-bottom: 2.2cqi; }
 .ggcal-brand img { display: block; width: 12cqi; height: 12cqi; object-fit: contain; }
