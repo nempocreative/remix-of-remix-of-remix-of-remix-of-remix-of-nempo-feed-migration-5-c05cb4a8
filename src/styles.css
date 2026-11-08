@@ -61,6 +61,16 @@
   --ggkt-primary: #b0185a;
   --ggkt-line: color-mix(in srgb, #3d0b2a 16%, transparent);
 }
+/* GGS Feed slide 27 (3:4): Hari Pahlawan promo palette (cream to match the painted still life). */
+.ggph-root {
+  --ggph-ink: #3a0d1c;
+  --ggph-ink-soft: #6e3a44;
+  --ggph-paper: #f0e1cc;
+  --ggph-primary: #b3122f;
+  --ggph-line: color-mix(in srgb, #3a0d1c 18%, transparent);
+  --ggph-flag: linear-gradient(180deg, #d71920 0 50%, #ffffff 50% 100%);
+  --ggph-glow: radial-gradient(ellipse 70% 50% at 20% 45%, color-mix(in srgb, #fbf3e8 70%, transparent) 0%, transparent 70%);
+}
 /* GGS Feed slide 21 (3:4 video): nail art card deck palette. */
 .ggn-root {
   --ggn-ink: #3d0b2a;
