@@ -6,7 +6,6 @@ import brandWordmarkAsset from '@/assets/tion/nasution-boy-retro-logo-headline-y
 import tionAsset12 from '@/assets/tion/avocado-milk-user-trim.png.asset.json';
 import tionAsset13 from '@/assets/tion/kopi-kenangan-mantan-user-trim.png.asset.json';
 import tionAsset14 from '@/assets/tion/pistachio-user-trim.png.asset.json';
-import { TION_BASE } from '@/apps/tion/base';
 
 const backgroundImage = productBackground.url;
 const brandWordmark = brandWordmarkAsset.url;

@@ -27,4 +27,4 @@
 - [x] Kalender GGS: perbarui komposisi, rapikan dua belas bulan, dan periksa tampilan serta unduhan PNG.
 - [x] Kalender GGS: tambahkan tanggal merah dan keterangan hari besar berdasarkan sumber yang terverifikasi.
 - [x] Migrasi Tion Feed (Nasution Boy) dari repo organizer ke /tion-feed
-- [x] Tion Feed: sisakan slide 1 dan Story saja
+- [x] Tion Feed: sisakan slide 1 saja (Story juga dihapus)
