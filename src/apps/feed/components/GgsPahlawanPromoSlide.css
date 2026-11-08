@@ -30,7 +30,7 @@
 25%{opacity:0}
 100%{opacity:0;transform:scale(1)}}
 .ggph-stage::after{content:'';position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(180deg,transparent 62%,color-mix(in srgb,var(--ggph-ink) 82%,transparent) 100%)}
-.ggph-progress{position:absolute;z-index:5;left:9cqw;right:9cqw;top:11cqw;display:flex;gap:.8cqw}
+.ggph-progress{position:absolute;z-index:5;left:3.6cqw;right:3.6cqw;bottom:14cqw;display:flex;gap:.8cqw}
 .ggph-progress span{flex:1;height:.45cqw;border-radius:1cqw;overflow:hidden;background:color-mix(in srgb,var(--ggph-paper) 40%,transparent)}
 .ggph-fill{display:block;height:100%;background:var(--ggph-paper);transform-origin:left;transform:scaleX(0)}
 @keyframes ggph-f0{0%{transform:scaleX(0)}0%{transform:scaleX(0)}20%{transform:scaleX(1)}99.9%{transform:scaleX(1)}100%{transform:scaleX(0)}}
