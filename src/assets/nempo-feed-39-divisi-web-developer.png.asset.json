@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "bc78cb61-8a51-487e-95d9-c83cfe36776b",
-  "project_id": "30d70bf9-0134-4781-a755-d242c69863c0",
-  "url": "/__l5e/assets-v1/bc78cb61-8a51-487e-95d9-c83cfe36776b/nempo-feed-39-divisi-web-developer.png",
-  "r2_key": "a/v1/30d70bf9-0134-4781-a755-d242c69863c0/bc78cb61-8a51-487e-95d9-c83cfe36776b/nempo-feed-39-divisi-web-developer.png",
-  "original_filename": "nempo-feed-39-divisi-web-developer.png",
-  "size": 2662098,
   "content_type": "image/png",
-  "created_at": "2026-11-08T14:26:35Z"
+  "created_at": "2026-11-08T14:26:35Z",
+  "original_filename": "nempo-feed-39-divisi-web-developer.png",
+  "project_id": "d15c6563-58d5-4817-8c48-e4d5be617050",
+  "r2_key": "a/v1/d15c6563-58d5-4817-8c48-e4d5be617050/bc78cb61-8a51-487e-95d9-c83cfe36776b/nempo-feed-39-divisi-web-developer.png",
+  "size": 2662098,
+  "url": "/__l5e/assets-v1/bc78cb61-8a51-487e-95d9-c83cfe36776b/nempo-feed-39-divisi-web-developer.png",
+  "version": 1
 }

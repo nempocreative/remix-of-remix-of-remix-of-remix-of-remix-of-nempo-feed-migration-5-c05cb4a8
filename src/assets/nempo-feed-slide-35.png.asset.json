@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "5e6601c5-832a-4aae-8cd4-ca322d05f937",
-  "project_id": "30d70bf9-0134-4781-a755-d242c69863c0",
-  "url": "/__l5e/assets-v1/5e6601c5-832a-4aae-8cd4-ca322d05f937/nempo-feed-35-kala-muda-team.png",
-  "r2_key": "a/v1/30d70bf9-0134-4781-a755-d242c69863c0/5e6601c5-832a-4aae-8cd4-ca322d05f937/nempo-feed-35-kala-muda-team.png",
-  "original_filename": "nempo-feed-35-kala-muda-team.png",
-  "size": 6060776,
   "content_type": "image/png",
-  "created_at": "2026-11-08T13:29:18Z"
+  "created_at": "2026-11-08T13:29:18Z",
+  "original_filename": "nempo-feed-35-kala-muda-team.png",
+  "project_id": "d15c6563-58d5-4817-8c48-e4d5be617050",
+  "r2_key": "a/v1/d15c6563-58d5-4817-8c48-e4d5be617050/5e6601c5-832a-4aae-8cd4-ca322d05f937/nempo-feed-35-kala-muda-team.png",
+  "size": 6060776,
+  "url": "/__l5e/assets-v1/5e6601c5-832a-4aae-8cd4-ca322d05f937/nempo-feed-35-kala-muda-team.png",
+  "version": 1
 }

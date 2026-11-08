@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "e5ad680b-0493-48af-94ec-1964365ddf14",
-  "project_id": "30d70bf9-0134-4781-a755-d242c69863c0",
-  "url": "/__l5e/assets-v1/e5ad680b-0493-48af-94ec-1964365ddf14/ggs-cowok-02-customer-service-2x.png",
-  "r2_key": "a/v1/30d70bf9-0134-4781-a755-d242c69863c0/e5ad680b-0493-48af-94ec-1964365ddf14/ggs-cowok-02-customer-service-2x.png",
-  "original_filename": "ggs-cowok-02-customer-service-2x.png",
-  "size": 4187568,
   "content_type": "image/png",
-  "created_at": "2026-11-08T13:26:16Z"
+  "created_at": "2026-11-08T13:26:16Z",
+  "original_filename": "ggs-cowok-02-customer-service-2x.png",
+  "project_id": "d15c6563-58d5-4817-8c48-e4d5be617050",
+  "r2_key": "a/v1/d15c6563-58d5-4817-8c48-e4d5be617050/e5ad680b-0493-48af-94ec-1964365ddf14/ggs-cowok-02-customer-service-2x.png",
+  "size": 4187568,
+  "url": "/__l5e/assets-v1/e5ad680b-0493-48af-94ec-1964365ddf14/ggs-cowok-02-customer-service-2x.png",
+  "version": 1
 }
