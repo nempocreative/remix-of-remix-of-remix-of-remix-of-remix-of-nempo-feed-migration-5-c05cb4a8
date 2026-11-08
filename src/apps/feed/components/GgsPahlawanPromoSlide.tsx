@@ -1,10 +1,10 @@
 import type { RefObject } from 'react';
 import { Baby, BookOpen, HeartPulse, ShieldCheck, Stethoscope, type LucideIcon } from 'lucide-react';
-import guruPhoto from '@/assets/ggs-pahlawan-guru-salon.jpg';
-import dokterPhoto from '@/assets/ggs-pahlawan-dokter-salon.jpg';
-import perawatPhoto from '@/assets/ggs-pahlawan-perawat-salon.jpg';
-import polwanPhoto from '@/assets/ggs-pahlawan-polwan-salon.jpg';
-import bidanPhoto from '@/assets/ggs-pahlawan-bidan-salon.jpg';
+import guruPhoto from '@/assets/ggs-pahlawan-guru-cutout.png';
+import dokterPhoto from '@/assets/ggs-pahlawan-dokter-cutout.png';
+import perawatPhoto from '@/assets/ggs-pahlawan-perawat-cutout.png';
+import polwanPhoto from '@/assets/ggs-pahlawan-polwan-cutout.png';
+import bidanPhoto from '@/assets/ggs-pahlawan-bidan-cutout.png';
 import ggsWatermark from '@/assets/ggs-header-footer-v2.png.asset.json';
 import { GGS_PAHLAWAN_PROMO, type GgsPahlawanProfession } from './ggs-pahlawan-promo';
 import './GgsPahlawanPromoSlide.css';
