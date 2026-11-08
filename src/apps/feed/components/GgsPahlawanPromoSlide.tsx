@@ -1,6 +1,7 @@
 import type { RefObject } from 'react';
 import { Baby, BookOpen, HeartPulse, ShieldCheck, Stethoscope, type LucideIcon } from 'lucide-react';
-import stillLife from '@/assets/ggs-pahlawan-heroes-still-life.jpg';
+import nursePoster from '@/assets/ggs-pahlawan-perawat-salon.jpg';
+import nurseVideo from '@/assets/videos/ggs-pahlawan-perawat-salon.mp4.asset.json';
 import ggsWatermark from '@/assets/ggs-header-footer-v2.png.asset.json';
 import { GGS_PAHLAWAN_PROMO, type GgsPahlawanProfession } from './ggs-pahlawan-promo';
 import './GgsPahlawanPromoSlide.css';
@@ -22,13 +23,19 @@ export function GgsPahlawanPromoSlide({ exportRef }: { exportRef?: RefObject<HTM
       className="ggph-root"
       aria-label={`GGS Beauty — promo Hari Pahlawan, diskon ${discountPercent}% untuk ${professions.join(', ')}`}
     >
-      <img
-        className="ggph-art"
-        src={stillLife}
-        width={896}
-        height={1792}
-        alt="Lukisan topi polisi, stetoskop, topi perawat, buku guru, dan sepatu bayi berpita merah putih"
-      />
+      <figure className="ggph-frame">
+        <video
+          className="ggph-video"
+          src={nurseVideo.url}
+          poster={nursePoster}
+          aria-label="Stylist GGS berseragam perawat tersenyum sambil memegang gunting, sisir, dan hair dryer"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        />
+      </figure>
 
       <section className="ggph-copy">
         <p className="ggph-kicker">

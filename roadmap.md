@@ -5,6 +5,9 @@
 - [ ] Slide 35: buat ulang video unduhan (tunggu persetujuan owner)
 - [x] GGS slide 25: promo nail art mulai 35.000 (foto owner diperbagus)
 - [x] GGS slide 27: promo Hari Pahlawan diskon 40% untuk guru, dokter, perawat, polisi, bidan (tunggu konfirmasi syarat kartu profesi)
+- [x] GGS slide 27: video stylist berseragam perawat bawa alat salon + MP4 unduhan
+- [x] Foto stylist berhijab (IMG_2709) pakai baju guru bawa alat salon
+- [ ] Video guru / pasang foto guru di slide (tunggu pilihan owner)
 - [x] NEMPO slide 37: ganti kolase dengan video animasi lima kegiatan, sampul penuh, dan unduhan sesuai preview.
 - [x] NEMPO slide 37: empat foto kiriman ditambahkan; video 28 detik memuat sembilan foto, sampul penuh, tampilan desktop/ponsel dan kedua unduhan teruji sesuai berkas baru.
 - [ ] NEMPO slide 37: ganti judul kegiatan 7 menjadi Band Kala Muda, hapus seluruh ikon bintang, rapikan ikon pembuka, dan perbarui video serta sampul.
