@@ -48,3 +48,10 @@
 @keyframes ggph-cap{0%,3%{opacity:0;transform:translateY(1.6cqw)}8%{opacity:1;transform:none}18%{opacity:1;transform:none}20%,100%{opacity:0;transform:translateY(-1cqw)}}
 @keyframes ggph-hl{0%{color:var(--ggph-ink)}3%,18%{color:var(--ggph-primary)}21%,100%{color:var(--ggph-ink)}}
 @media (prefers-reduced-motion:reduce){.ggph-shot,.ggph-cap,.ggph-list li,.ggph-fill{animation:none}.ggph-shot:first-child,.ggph-cap:first-child{opacity:1}}
+
+.ggph-deco{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.ggph-deco::before{content:'';position:absolute;left:46cqw;top:18cqw;width:62cqw;height:62cqw;border-radius:50%;background:repeating-conic-gradient(from 0deg,color-mix(in oklab,var(--ggph-primary) 9%,transparent) 0 3deg,transparent 3deg 12deg);-webkit-mask-image:radial-gradient(circle,#000 30%,transparent 70%);mask-image:radial-gradient(circle,#000 30%,transparent 70%)}
+.ggph-deco::after{content:'';position:absolute;left:-10cqw;right:-10cqw;top:96cqw;height:16cqw;transform:rotate(-8deg);background:linear-gradient(90deg,transparent,color-mix(in oklab,var(--ggph-primary) 10%,transparent) 30%,color-mix(in oklab,var(--ggph-primary) 14%,transparent) 70%,transparent),linear-gradient(transparent 55%,color-mix(in oklab,var(--ggph-paper) 70%,transparent) 55%)}
+.ggph-ring{position:absolute;left:52cqw;top:26cqw;width:46cqw;height:46cqw;border-radius:50%;border:.3cqw solid color-mix(in oklab,var(--ggph-primary) 22%,transparent)}
+.ggph-ring-2{left:49cqw;top:23cqw;width:52cqw;height:52cqw;border:.15cqw dashed color-mix(in oklab,var(--ggph-primary) 18%,transparent)}
+.ggph-word{position:absolute;right:-2cqw;top:20cqw;writing-mode:vertical-rl;font-family:'Playfair Display',Georgia,serif;font-weight:800;font-size:12cqw;letter-spacing:1cqw;line-height:1;color:transparent;-webkit-text-stroke:.15cqw color-mix(in oklab,var(--ggph-primary) 20%,transparent)}

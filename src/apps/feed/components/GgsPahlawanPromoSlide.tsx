@@ -34,6 +34,7 @@ export function GgsPahlawanPromoSlide({ exportRef }: { exportRef?: RefObject<HTM
       className="ggph-root"
       aria-label={`GGS Beauty — promo Hari Pahlawan, diskon ${discountPercent}% untuk ${professions.join(', ')}`}
     >
+      <div className="ggph-deco" aria-hidden="true"><span className="ggph-ring" /><span className="ggph-ring ggph-ring-2" /><span className="ggph-word">PAHLAWAN</span></div>
       <figure className="ggph-frame">
         <div className="ggph-stage">
           <div className="ggph-crop">
@@ -65,7 +66,6 @@ export function GgsPahlawanPromoSlide({ exportRef }: { exportRef?: RefObject<HTM
 
       <section className="ggph-copy">
         <p className="ggph-kicker">
-          <span className="ggph-flag" aria-hidden="true" />
           Hari Pahlawan · {date}
         </p>
         <h2 className="ggph-title">
