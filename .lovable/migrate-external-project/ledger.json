@@ -1,0 +1,89 @@
+{
+  "source": "github.com/nempocreative/remix-of-remix-of-remix-of-remix-of-remix-of-nempo-feed-migration-5",
+  "capabilities": [
+    {
+      "capability": "code",
+      "source": "TanStack Start app with NEMPO Feed sub-app at /nempo-feed",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "dependencies",
+      "source": "package.json (same TanStack pins, extra libs)",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "uploaded file bytes",
+      "source": "57 hosted media files owned by the source project",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "schema",
+      "source": "none detected",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "records",
+      "source": "none detected",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "auth identities",
+      "source": "none detected",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "authorization",
+      "source": "none detected",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "external providers",
+      "source": "none detected",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "public endpoints, callbacks, webhooks, schedules",
+      "source": "none detected",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "secrets",
+      "source": "none required",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "cutover",
+      "source": "frontend only",
+      "outcome": "publish this project when ready",
+      "status": "pending",
+      "next_action": "user publishes"
+    },
+    {
+      "capability": "verification",
+      "source": "build, tests, routes",
+      "outcome": "verify",
+      "status": "verified",
+      "next_action": "none"
+    }
+  ]
+}
