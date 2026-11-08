@@ -8,6 +8,7 @@
 /* GGS annual calendar: print-safe editorial composition and local brand tokens. */
 .ggcal-root {
   --ggcal-paper: #f6cddd;
+  --ggcal-date-paper: oklch(1 0 0);
   --ggcal-ink: #342730;
   --ggcal-primary: #973554;
   --ggcal-muted: #68505c;
@@ -38,7 +39,7 @@
 .ggcal-photo-spa img { object-position: 60% 65%; }
 .ggcal-photo-salon img { object-position: 50% 78%; }
 .ggcal-photo-caption { display: flex; justify-content: space-between; padding: 1.1cqi 0 1.5cqi; font-size: 1.2cqi; text-transform: uppercase; color: var(--ggcal-muted); border-bottom: .18cqi solid var(--ggcal-primary); }
-.ggcal-months { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(4, minmax(0, 1fr)); gap: 1.3cqi 3cqi; padding-top: 2.3cqi; }
+.ggcal-months { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(4, minmax(0, 1fr)); gap: 1.3cqi 3cqi; margin-top: 1.5cqi; padding: 1.5cqi; background: var(--ggcal-date-paper); }
 .ggcal-month { display: flex; flex-direction: column; min-height: 0; min-width: 0; }
 .ggcal-month-heading { display: flex; align-items: center; justify-content: space-between; border-bottom: .12cqi solid var(--ggcal-line); padding-bottom: .7cqi; }
 .ggcal-month-heading h2 { margin: 0; font-family: 'Playfair Display', Georgia, serif; font-size: 2.7cqi; line-height: 1.2; font-weight: 600; }
