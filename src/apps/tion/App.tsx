@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react';
 import { toCanvas } from 'html-to-image';
 import { Download } from 'lucide-react';
-import StoryPage from './story/StoryPage';
 import productBackground from '@/assets/tion/nasution-retro-product-background-ai.png.asset.json';
 import brandWordmarkAsset from '@/assets/tion/nasution-boy-retro-logo-headline-yellow-v2.png.asset.json';
 import tionAsset12 from '@/assets/tion/avocado-milk-user-trim.png.asset.json';
@@ -202,22 +201,7 @@ function FeedPage() {
   return (
     <main className="min-h-screen w-full bg-[#e9dfca] px-6 py-4 max-[640px]:px-0 max-[640px]:py-0">
       <div className="flex min-h-[calc(100vh-4rem)] w-full flex-col items-center justify-center max-[640px]:min-h-screen">
-        <header className="mb-3 flex w-full max-w-[720px] items-center justify-between gap-2 px-2 max-[640px]:flex-col max-[640px]:items-center max-[640px]:pt-3 sm:px-0">
-          <nav aria-label="Pilih format" className="inline-flex shrink-0 rounded-full border border-[#d5c5a6] bg-[#f5eddd] p-1 shadow-[0_4px_12px_rgba(56,42,24,0.12)]">
-            <span
-              aria-current="page"
-              className="rounded-full bg-[#28483a] px-3 py-2 text-[11px] font-extrabold text-white shadow-sm"
-            >
-              Feed 4:5
-            </span>
-            <a
-              href={`${TION_BASE}story/`}
-              aria-label="Buka desain Instagram Story 9:16"
-              className="rounded-full px-3 py-2 text-[11px] font-extrabold text-[#28483a] transition-colors hover:bg-[#ebe0c9] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c58152] focus-visible:ring-offset-2"
-            >
-              Story 9:16
-            </a>
-          </nav>
+        <header className="mb-3 flex w-full max-w-[720px] items-center justify-end gap-2 px-2 max-[640px]:flex-col max-[640px]:items-center max-[640px]:pt-3 sm:px-0">
           <button
             type="button"
             onClick={handleDownload}
@@ -353,9 +337,6 @@ function FeedPage() {
 }
 
 function App() {
-  const storyPath = `${TION_BASE}story`.replace(/\/+$/, '');
-  const currentPath = window.location.pathname.replace(/\/+$/, '');
-  if (currentPath === storyPath) return <StoryPage />;
   return <FeedPage />;
 }
 
