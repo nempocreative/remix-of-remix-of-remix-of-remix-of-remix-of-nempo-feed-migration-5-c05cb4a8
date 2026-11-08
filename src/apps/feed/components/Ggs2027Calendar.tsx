@@ -1,4 +1,6 @@
 import type { RefObject } from 'react';
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { MapPin } from 'lucide-react';
 
 const YEAR = 2027;
 const assetBase = "/nempo-feed/";
@@ -41,7 +43,7 @@ export function Ggs2027Calendar({
     <main ref={exportRef} className="ggcal-root"
       aria-label="Kalender GGS Beauty tahun 2027 ukuran 50 kali 70 sentimeter, seluruh dua belas bulan dalam satu lembar">
       <header className="ggcal-header">
-        <div className="ggcal-brand"><p>GGS<span>Beauty Salon</span></p></div>
+        <div className="ggcal-brand"><img src={`${assetBase}assets/ggs-beauty-logo.png`} alt="Logo GGS Beauty" draggable={false} /></div>
         <div className="ggcal-year"><h1>{YEAR}</h1><span>Kalender</span></div>
         <p className="ggcal-motto">Grooming<br /><em>is Better.</em></p>
       </header>
@@ -77,7 +79,14 @@ export function Ggs2027Calendar({
           </section>
         ))}
       </div>
-      <footer className="ggcal-footer"><span>Professional &amp; Friendly Team</span><p>Together We Grow</p><span>GGS Beauty Salon · {YEAR}</span></footer>
+      <footer className="ggcal-footer">
+        <div className="ggcal-contact-row">
+          <a href="https://wa.me/6282342777723" target="_blank" rel="noopener noreferrer"><FaWhatsapp aria-hidden="true" />0823-4277-7723</a>
+          <a href="https://www.instagram.com/ggsbeauty.hair.co/" target="_blank" rel="noopener noreferrer"><FaInstagram aria-hidden="true" />@ggsbeauty.hair.co</a>
+        </div>
+        <address><MapPin aria-hidden="true" />Jl. Cimanuk No. 309, Sukagalih, Garut</address>
+        <p>Together We Grow</p>
+      </footer>
     </main>
   );
 }
