@@ -25,4 +25,4 @@
 - [x] GGS slide 27: remove flag, themed background
 
 - [x] Kalender GGS: perbarui komposisi, rapikan dua belas bulan, dan periksa tampilan serta unduhan PNG.
-- [ ] Kalender GGS: tambahkan tanggal merah dan keterangan hari besar berdasarkan sumber yang terverifikasi.
+- [x] Kalender GGS: tambahkan tanggal merah dan keterangan hari besar berdasarkan sumber yang terverifikasi.
