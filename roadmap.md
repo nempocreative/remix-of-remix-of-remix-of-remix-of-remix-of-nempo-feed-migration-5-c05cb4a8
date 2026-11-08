@@ -23,3 +23,5 @@
 - [x] GGS slide 27: half-body cut-outs with soft bottom fade
 - [x] GGS slide 27: modest polwan uniform
 - [x] GGS slide 27: remove flag, themed background
+
+- [ ] Kalender GGS: perbarui komposisi, rapikan dua belas bulan, dan periksa tampilan serta unduhan PNG.
