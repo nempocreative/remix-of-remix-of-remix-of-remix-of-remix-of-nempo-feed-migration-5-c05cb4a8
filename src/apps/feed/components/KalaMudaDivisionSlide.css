@@ -3,6 +3,17 @@
 .kmd-root .kmd-backdrop { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
 .kmd-glow { position: absolute; inset: 0; z-index: 0; background: var(--kmd-scrim), var(--kmd-glow); pointer-events: none; }
 
+/* Chalk doodles: kept to the empty corners so they never sit under text */
+.kmd-doodles { position: absolute; inset: 0; z-index: 1; pointer-events: none; color: var(--kmd-chalk); }
+.kmd-doodles svg { position: absolute; display: block; overflow: visible; }
+.kmd-doodles path, .kmd-doodles circle { stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.kmd-doodle-trail { right: 9cqw; bottom: 1.5cqw; width: 9cqw; height: 15cqw; }
+.kmd-doodle-trail path { stroke-dasharray: 2px 5px; }
+.kmd-root .kmd-doodle-icon { position: absolute; right: 4.5cqw; bottom: 15.5cqw; width: 10cqw; height: 10cqw; transform: rotate(-12deg); }
+.kmd-doodle-spark { right: 13.5cqw; bottom: 24.5cqw; width: 3.4cqw; height: 3.4cqw; transform: rotate(160deg); }
+.kmd-doodle-loop { left: 3cqw; bottom: 3cqw; width: 19cqw; height: 8.6cqw; }
+.kmd-doodle-loop circle { fill: var(--kmd-accent); stroke: none; }
+
 /* Hero: text left, painted illustration right */
 .kmd-hero { position: absolute; z-index: 2; top: 20cqw; left: 7.5cqw; right: 7.5cqw; height: 47cqw; display: flex; gap: 4cqw; }
 .kmd-hero-text { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
