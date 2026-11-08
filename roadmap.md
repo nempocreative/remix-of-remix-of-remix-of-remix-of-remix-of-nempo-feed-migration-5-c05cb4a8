@@ -26,3 +26,4 @@
 
 - [x] Kalender GGS: perbarui komposisi, rapikan dua belas bulan, dan periksa tampilan serta unduhan PNG.
 - [x] Kalender GGS: tambahkan tanggal merah dan keterangan hari besar berdasarkan sumber yang terverifikasi.
+- [x] Migrasi Tion Feed (Nasution Boy) dari repo organizer ke /tion-feed
