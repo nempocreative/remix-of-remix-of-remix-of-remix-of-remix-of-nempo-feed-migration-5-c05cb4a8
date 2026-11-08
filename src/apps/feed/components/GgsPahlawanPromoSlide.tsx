@@ -36,6 +36,7 @@ export function GgsPahlawanPromoSlide({ exportRef }: { exportRef?: RefObject<HTM
     >
       <figure className="ggph-frame">
         <div className="ggph-stage">
+          <div className="ggph-crop">
           {professions.map((name, i) => (
             <img
               key={name}
@@ -45,6 +46,7 @@ export function GgsPahlawanPromoSlide({ exportRef }: { exportRef?: RefObject<HTM
               alt={`Stylist GGS berseragam ${name.toLowerCase()} memegang alat salon`}
             />
           ))}
+          </div>
           <div className="ggph-progress" aria-hidden="true">
             {professions.map((name, i) => (
               <span key={name}><i className={`ggph-fill ggph-fill-${i}`} /></span>
