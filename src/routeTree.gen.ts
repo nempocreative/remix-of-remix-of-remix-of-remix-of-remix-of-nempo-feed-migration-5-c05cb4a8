@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as NempoFeedIndexRouteImport } from './routes/nempo-feed.index'
 import { Route as NempoFeedSplatRouteImport } from './routes/nempo-feed.$'
+import { Route as TionFeedIndexRouteImport } from './routes/tion-feed.index'
+import { Route as TionFeedSplatRouteImport } from './routes/tion-feed.$'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +30,60 @@ const NempoFeedSplatRoute = NempoFeedSplatRouteImport.update({
   path: '/nempo-feed/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TionFeedIndexRoute = TionFeedIndexRouteImport.update({
+  id: '/tion-feed/',
+  path: '/tion-feed/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TionFeedSplatRoute = TionFeedSplatRouteImport.update({
+  id: '/tion-feed/$',
+  path: '/tion-feed/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/nempo-feed/$': typeof NempoFeedSplatRoute
+  '/tion-feed/$': typeof TionFeedSplatRoute
   '/nempo-feed/': typeof NempoFeedIndexRoute
+  '/tion-feed/': typeof TionFeedIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/nempo-feed/$': typeof NempoFeedSplatRoute
+  '/tion-feed/$': typeof TionFeedSplatRoute
   '/nempo-feed': typeof NempoFeedIndexRoute
+  '/tion-feed': typeof TionFeedIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/nempo-feed/$': typeof NempoFeedSplatRoute
+  '/tion-feed/$': typeof TionFeedSplatRoute
   '/nempo-feed/': typeof NempoFeedIndexRoute
+  '/tion-feed/': typeof TionFeedIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/nempo-feed/$' | '/nempo-feed/'
+  fullPaths:
+    '/' | '/nempo-feed/$' | '/tion-feed/$' | '/nempo-feed/' | '/tion-feed/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/nempo-feed/$' | '/nempo-feed'
-  id: '__root__' | '/' | '/nempo-feed/$' | '/nempo-feed/'
+  to: '/' | '/nempo-feed/$' | '/tion-feed/$' | '/nempo-feed' | '/tion-feed'
+  id:
+    | '__root__'
+    | '/'
+    | '/nempo-feed/$'
+    | '/tion-feed/$'
+    | '/nempo-feed/'
+    | '/tion-feed/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   NempoFeedSplatRoute: typeof NempoFeedSplatRoute
+  TionFeedSplatRoute: typeof TionFeedSplatRoute
   NempoFeedIndexRoute: typeof NempoFeedIndexRoute
+  TionFeedIndexRoute: typeof TionFeedIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,13 +109,29 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NempoFeedSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tion-feed/': {
+      id: '/tion-feed/'
+      path: '/tion-feed'
+      fullPath: '/tion-feed/'
+      preLoaderRoute: typeof TionFeedIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tion-feed/$': {
+      id: '/tion-feed/$'
+      path: '/tion-feed/$'
+      fullPath: '/tion-feed/$'
+      preLoaderRoute: typeof TionFeedSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   NempoFeedSplatRoute: NempoFeedSplatRoute,
+  TionFeedSplatRoute: TionFeedSplatRoute,
   NempoFeedIndexRoute: NempoFeedIndexRoute,
+  TionFeedIndexRoute: TionFeedIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
