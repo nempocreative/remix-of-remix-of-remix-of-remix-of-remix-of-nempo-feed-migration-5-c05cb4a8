@@ -2,6 +2,7 @@ import type { RefObject } from 'react';
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import { MapPin } from 'lucide-react';
 import { CALENDAR_EVENTS, getCalendarEvent, isCalendarRedDate } from './ggs-calendar-dates';
+import calendarBackground from '@/assets/ggs-calendar-painted-background.jpg';
 
 const YEAR = 2027;
 const assetBase = "/nempo-feed/";
@@ -43,6 +44,8 @@ export function Ggs2027Calendar({
   return (
     <main ref={exportRef} className="ggcal-root"
       aria-label="Kalender GGS Beauty tahun 2027 ukuran 50 kali 70 sentimeter, seluruh dua belas bulan dalam satu lembar">
+      <img className="ggcal-background" src={calendarBackground} alt="" aria-hidden="true" width={1408} height={1920} draggable={false} />
+      <div className="ggcal-background-wash" aria-hidden="true" />
       <header className="ggcal-header">
         <div className="ggcal-brand"><img src={`${assetBase}assets/ggs-beauty-logo.png`} alt="Logo GGS Beauty" draggable={false} /></div>
         <div className="ggcal-year"><h1>{YEAR}</h1><span>Kalender</span></div>
