@@ -21,6 +21,7 @@ import ggsOpenHoursVideo from '@/assets/ggs-feed-23-open-hours.mp4.asset.json';
 import ggsContactPng from '@/assets/ggs-feed-24-customer-service.png.asset.json';
 import ggsPromoNailPng from '@/assets/ggs-feed-25-promo-nail-art.png.asset.json';
 import ggsKidTreatmentPng from '@/assets/ggs-feed-26-kids-hair-treatment.png.asset.json';
+import ggsPahlawanPromoPng from '@/assets/ggs-feed-27-promo-hari-pahlawan.png.asset.json';
 import ggsStoryCoverPng from '@/assets/ggs-story-04-peduli-penampilan.png.asset.json';
 import ggsStoryCoverCenteredPng from '@/assets/ggs-story-05-peduli-penampilan-feed.png.asset.json';
 import ggsPromoSpesialPng from '@/assets/ggs-feed-11-promo-spesial.png';
@@ -139,6 +140,7 @@ import { GgsOpenHoursSlide } from './components/GgsOpenHoursSlide';
 import { GgsContactSlide } from './components/GgsContactSlide';
 import { GgsPromoNailSlide } from './components/GgsPromoNailSlide';
 import { GgsKidTreatmentSlide } from './components/GgsKidTreatmentSlide';
+import { GgsPahlawanPromoSlide } from './components/GgsPahlawanPromoSlide';
 import { GgsServicesSlide, GGS_SERVICES_SLIDES } from './components/GgsServicesSlide';
 import { GgsRatusPromoSlide } from './components/GgsRatusPromoSlide';
 import { KalaMudaRecruitSlide } from './components/KalaMudaRecruitSlide';
@@ -204,7 +206,7 @@ type FeedSlide =
   | 42
   | 43;
 
-type ClientSlide = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26;
+type ClientSlide = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27;
 
 const cafes = [
   {
@@ -2772,6 +2774,10 @@ function ClientFeedArtwork({
     return <GgsKidTreatmentSlide exportRef={exportRef} />;
   }
 
+  if (!isStory && slide === 27) {
+    return <GgsPahlawanPromoSlide exportRef={exportRef} />;
+  }
+
   if (!isStory && slide >= 13 && slide <= 18) {
     return <GgsServicesSlide exportRef={exportRef} data={GGS_SERVICES_SLIDES[slide - 13]!} />;
   }
@@ -3120,7 +3126,7 @@ function App() {
       : isGgsFeed
       ? isGgsStory
         ? [1, 2, 3, 4, 5]
-        : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+        : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
       : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, ...DIVISION_SLIDES];
   const selectedSlide =
     isGgsFeed ? activeClientSlide : activeSlide;
@@ -3363,17 +3369,17 @@ function App() {
                   PNG 3240×5760. Di iPad/iPhone pilih “Simpan Gambar” atau “Simpan ke File”; jika gambar terbuka, tekan lama lalu Simpan.
                 </p>
               </>
-            ) : activeFeed === 'client' && (activeClientSlide === 8 || activeClientSlide === 9 || activeClientSlide === 11 || activeClientSlide === 19 || activeClientSlide === 20 || activeClientSlide === 24 || activeClientSlide === 25 || activeClientSlide === 26 || GGS_LAYANAN_PNGS[activeClientSlide]) ? (
+            ) : activeFeed === 'client' && (activeClientSlide === 8 || activeClientSlide === 9 || activeClientSlide === 11 || activeClientSlide === 19 || activeClientSlide === 20 || activeClientSlide === 24 || activeClientSlide === 25 || activeClientSlide === 26 || activeClientSlide === 27 || GGS_LAYANAN_PNGS[activeClientSlide]) ? (
               <>
                 <PrebuiltPngDownload
                   key={activeClientSlide}
-                  src={GGS_LAYANAN_PNGS[activeClientSlide] ?? (activeClientSlide === 11 ? ggsPromoSpesialPng : activeClientSlide === 9 ? ggsNailPahlawanPng : activeClientSlide === 19 ? ggsLokerPng : activeClientSlide === 20 ? ggsFeedKidPng.url : activeClientSlide === 24 ? ggsContactPng.url : activeClientSlide === 25 ? ggsPromoNailPng.url : activeClientSlide === 26 ? ggsKidTreatmentPng.url : ggsRatusBenefitPng)}
-                  fileName={GGS_LAYANAN_PNGS[activeClientSlide] ? `GGS-Feed-${activeClientSlide}-Layanan.png` : activeClientSlide === 11 ? 'GGS-Feed-11-Promo-Spesial.png' : activeClientSlide === 9 ? 'GGS-Feed-09-Nail-Art-Hari-Pahlawan.png' : activeClientSlide === 19 ? 'GGS-Feed-19-Open-Loker.png' : activeClientSlide === 20 ? 'GGS-Feed-20-Peduli-Penampilan.png' : activeClientSlide === 24 ? 'GGS-Feed-24-Customer-Service.png' : activeClientSlide === 25 ? 'GGS-Feed-25-Promo-Nail-Art.png' : activeClientSlide === 26 ? 'GGS-Feed-26-Kids-Hair-Treatment.png' : 'GGS-Feed-08-Manfaat-Ratus.png'}
-                  label={activeClientSlide === 25 || activeClientSlide === 26 ? "Download PNG" : "Download PNG · 3×"}
+                  src={GGS_LAYANAN_PNGS[activeClientSlide] ?? (activeClientSlide === 11 ? ggsPromoSpesialPng : activeClientSlide === 9 ? ggsNailPahlawanPng : activeClientSlide === 19 ? ggsLokerPng : activeClientSlide === 20 ? ggsFeedKidPng.url : activeClientSlide === 24 ? ggsContactPng.url : activeClientSlide === 25 ? ggsPromoNailPng.url : activeClientSlide === 26 ? ggsKidTreatmentPng.url : activeClientSlide === 27 ? ggsPahlawanPromoPng.url : ggsRatusBenefitPng)}
+                  fileName={GGS_LAYANAN_PNGS[activeClientSlide] ? `GGS-Feed-${activeClientSlide}-Layanan.png` : activeClientSlide === 11 ? 'GGS-Feed-11-Promo-Spesial.png' : activeClientSlide === 9 ? 'GGS-Feed-09-Nail-Art-Hari-Pahlawan.png' : activeClientSlide === 19 ? 'GGS-Feed-19-Open-Loker.png' : activeClientSlide === 20 ? 'GGS-Feed-20-Peduli-Penampilan.png' : activeClientSlide === 24 ? 'GGS-Feed-24-Customer-Service.png' : activeClientSlide === 25 ? 'GGS-Feed-25-Promo-Nail-Art.png' : activeClientSlide === 26 ? 'GGS-Feed-26-Kids-Hair-Treatment.png' : activeClientSlide === 27 ? 'GGS-Feed-27-Promo-Hari-Pahlawan.png' : 'GGS-Feed-08-Manfaat-Ratus.png'}
+                  label={activeClientSlide === 25 || activeClientSlide === 26 || activeClientSlide === 27 ? "Download PNG" : "Download PNG · 3×"}
                   className="inline-flex items-center gap-2 rounded-full bg-[#062f4d] px-4 py-2 text-[11px] font-black text-white shadow-[0_8px_20px_rgba(0,40,78,0.2)] transition-colors hover:bg-[#0b4d69] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffdd00] focus-visible:ring-offset-2"
                 />
                 <p className="max-w-[92vw] text-center text-[10px] font-medium text-slate-600">
-                  PNG {activeClientSlide === 25 || activeClientSlide === 26 ? "1440×1920, teks tajam" : "3240×4320"}. Di iPad/iPhone pilih “Simpan Gambar” atau “Simpan ke File”; jika gambar terbuka, tekan lama lalu Simpan.
+                  PNG {activeClientSlide === 25 || activeClientSlide === 26 || activeClientSlide === 27 ? "1440×1920, teks tajam" : "3240×4320"}. Di iPad/iPhone pilih “Simpan Gambar” atau “Simpan ke File”; jika gambar terbuka, tekan lama lalu Simpan.
                 </p>
               </>
             ) : isNempoFeed && DIVISION_PNGS[activeSlide] ? (
