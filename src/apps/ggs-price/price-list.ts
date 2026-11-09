@@ -188,7 +188,7 @@ export const GGS_PRICE_PAGES: PricePage[] = [
   },
   {
     id: 'massage-body',
-    label: 'MASSAGE.',
+    label: 'MASSAGE',
     labelSize: 47.4,
     textSize: 15.8,
     titleSize: 17.5,
@@ -230,7 +230,7 @@ export const GGS_PRICE_PAGES: PricePage[] = [
   },
   {
     id: 'bundling',
-    label: 'MASSAGE.',
+    label: 'MASSAGE',
     labelSize: 47.4,
     textSize: 20,
     titleSize: 22.2,
