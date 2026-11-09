@@ -3,7 +3,7 @@
   min-height: 100vh;
   background: var(--ggpr-desk);
   color: var(--ggpr-desk-text);
-  font-family: 'Urbanist', system-ui, sans-serif;
+  font-family: 'Jost', system-ui, sans-serif;
 }
 
 .ggpr-toolbar {
