@@ -23,6 +23,7 @@
 - [x] GGS slide 27: half-body cut-outs with soft bottom fade
 - [x] GGS slide 27: modest polwan uniform
 - [x] GGS slide 27: remove flag, themed background
+- [x] GGS slide 28: pedicure sebelum/sesudah dari foto owner, latar spa menyatu, unduhan PNG
 
 - [x] Kalender GGS: perbarui komposisi, rapikan dua belas bulan, dan periksa tampilan serta unduhan PNG.
 - [x] Kalender GGS: tambahkan tanggal merah dan keterangan hari besar berdasarkan sumber yang terverifikasi.
