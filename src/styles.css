@@ -122,6 +122,19 @@
   --ggkt-primary: #b0185a;
   --ggkt-line: color-mix(in srgb, #3d0b2a 16%, transparent);
 }
+/* GGS Feed slide 28 (3:4): pedicure before/after palette. */
+.ggpd-root {
+  --ggpd-ink: #3d0b2a;
+  --ggpd-ink-soft: #7a3a5c;
+  --ggpd-paper: #fadee8;
+  --ggpd-primary: #c2185b;
+  --ggpd-before: #6e5a52;
+  --ggpd-on-primary: #ffffff;
+  --ggpd-on-primary-soft: color-mix(in srgb, #ffffff 85%, transparent);
+  --ggpd-card: #ffffff;
+  --ggpd-shadow: 0 1.6cqw 4.4cqw color-mix(in srgb, #5a0f36 28%, transparent);
+  --ggpd-label-shadow: 0 .6cqw 1.8cqw color-mix(in srgb, #5a0f36 18%, transparent);
+}
 /* GGS Feed slide 27 (3:4): Hari Pahlawan promo palette (cream to match the painted still life). */
 .ggph-root {
   --ggph-ink: #3a0d1c;
