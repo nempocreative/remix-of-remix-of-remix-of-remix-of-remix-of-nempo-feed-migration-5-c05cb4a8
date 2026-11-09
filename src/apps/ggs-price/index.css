@@ -1,0 +1,196 @@
+/* GGS A4 price list. Sizes use --pt = one PDF point of a 595.5 × 842.25 pt A4 page. */
+.ggpr-root {
+  min-height: 100vh;
+  background: var(--ggpr-desk);
+  color: var(--ggpr-desk-text);
+  font-family: 'Jost', system-ui, sans-serif;
+}
+
+.ggpr-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  background: color-mix(in srgb, var(--ggpr-desk) 92%, transparent);
+  backdrop-filter: blur(8px);
+}
+.ggpr-toolbar h1 { font-size: 16px; font-weight: 600; margin: 0; }
+.ggpr-toolbar p { font-size: 12px; margin: 2px 0 0; color: var(--ggpr-desk-muted); }
+.ggpr-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.ggpr-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--ggpr-button);
+  color: var(--ggpr-button-text);
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ggpr-btn--ghost {
+  background: transparent;
+  color: var(--ggpr-desk-text);
+  box-shadow: inset 0 0 0 1px var(--ggpr-desk-muted);
+}
+.ggpr-btn[aria-disabled='true'] { opacity: .6; pointer-events: none; }
+
+.ggpr-pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 20px 14px 60px;
+}
+.ggpr-page-wrap { width: min(100%, 720px); }
+.ggpr-page-no { font-size: 12px; color: var(--ggpr-desk-muted); margin: 0 0 6px; }
+
+.ggpr-page {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 595.5 / 842.25;
+  overflow: hidden;
+  background: var(--ggpr-page);
+  box-shadow: var(--ggpr-shadow);
+  container-type: inline-size;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.ggpr-art {
+  position: absolute;
+  inset: 0;
+  --pt: calc(100cqw / 595.5);
+  color: var(--ggpr-text);
+}
+.ggpr-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; user-select: none; }
+
+.ggpr-tagline { position: absolute; left: calc(45 * var(--pt)); top: calc(41 * var(--pt)); line-height: 1; }
+.ggpr-tagline strong {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: calc(22.1 * var(--pt));
+  letter-spacing: -.01em;
+}
+.ggpr-tagline em {
+  display: block;
+  margin: calc(3 * var(--pt)) 0 0 calc(4 * var(--pt));
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: calc(18.7 * var(--pt));
+}
+
+.ggpr-list {
+  position: absolute;
+  left: calc(60 * var(--pt));
+  top: var(--top);
+  width: var(--w);
+}
+.ggpr-section + .ggpr-section { margin-top: calc(var(--row) * .32); }
+.ggpr-section + .ggpr-section.has-title { margin-top: calc(var(--row) * .38); }
+.ggpr-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: var(--title);
+  letter-spacing: .03em;
+  line-height: 1.2;
+  padding-bottom: calc(var(--title) * .5);
+}
+.ggpr-subtitle {
+  margin: 0;
+  font-weight: 300;
+  font-style: italic;
+  font-size: calc(var(--text) * 1.18);
+  line-height: 1.2;
+  padding: calc(var(--text) * .1) 0 calc(var(--text) * .55);
+}
+.ggpr-title + .ggpr-subtitle { padding-top: 0; }
+.ggpr-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(10 * var(--pt));
+  min-height: var(--row);
+  padding: calc(var(--row) * .1) 0 calc(var(--row) * .06) calc(2 * var(--pt));
+  border-bottom: calc(.75 * var(--pt)) solid var(--ggpr-rule);
+  font-weight: 300;
+  font-size: var(--text);
+  line-height: 1.12;
+}
+.ggpr-row .price { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ggpr-row--bundle { align-items: flex-start; padding-top: calc(var(--text) * .7); padding-bottom: calc(var(--text) * .55); }
+.ggpr-name { display: block; }
+.ggpr-dur {
+  display: flex;
+  align-items: center;
+  gap: calc(5 * var(--pt));
+  margin-top: calc(2 * var(--pt));
+  font-style: italic;
+  font-size: calc(var(--text) * .89);
+  letter-spacing: .02em;
+}
+.ggpr-dur svg { width: calc(18 * var(--pt)); height: calc(18 * var(--pt)); flex: none; }
+
+.ggpr-dot {
+  position: absolute;
+  left: calc(512 * var(--pt));
+  top: calc(351 * var(--pt));
+  width: calc(17 * var(--pt));
+  height: calc(17 * var(--pt));
+  border-radius: 50%;
+  background: var(--ggpr-text);
+}
+.ggpr-label {
+  position: absolute;
+  left: calc(520.5 * var(--pt));
+  top: calc(380 * var(--pt));
+  transform: translateX(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: var(--label);
+  line-height: 1;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  color: var(--ggpr-label);
+}
+
+.ggpr-footer-text {
+  position: absolute;
+  top: calc(785 * var(--pt));
+  height: calc(34 * var(--pt));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+.ggpr-footer-text.pill { color: var(--ggpr-accent); font-size: calc(13.6 * var(--pt)); width: calc(144 * var(--pt)); }
+.ggpr-footer-text.ig { left: calc(50 * var(--pt)); }
+.ggpr-footer-text.wa { left: calc(398 * var(--pt)); letter-spacing: .02em; }
+.ggpr-footer-text.book {
+  left: calc(194 * var(--pt));
+  width: calc(204 * var(--pt));
+  font-size: calc(18 * var(--pt));
+  letter-spacing: .04em;
+}
+.ggpr-footer-text.book em { font-style: italic; margin-left: .25em; }
+
+@media print {
+  @page { size: A4; margin: 0; }
+  html, body { background: none !important; margin: 0 !important; }
+  .ggpr-root { background: none; min-height: 0; }
+  .ggpr-toolbar, .ggpr-page-no { display: none !important; }
+  .ggpr-pages { display: block; padding: 0; }
+  .ggpr-page-wrap { width: 210mm; break-after: page; page-break-after: always; }
+  .ggpr-page-wrap:last-child { break-after: auto; page-break-after: auto; }
+  .ggpr-page { width: 210mm; height: 297mm; aspect-ratio: auto; box-shadow: none; }
+}

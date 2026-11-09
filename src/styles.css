@@ -135,6 +135,20 @@
   --ggpd-shadow: 0 1.6cqw 4.4cqw color-mix(in srgb, #5a0f36 28%, transparent);
   --ggpd-label-shadow: 0 .6cqw 1.8cqw color-mix(in srgb, #5a0f36 18%, transparent);
 }
+/* GGS A4 printed price list: colours sampled from the owner's Canva print file. */
+.ggpr-root {
+  --ggpr-page: #f48fb3;
+  --ggpr-text: #ffffff;
+  --ggpr-label: color-mix(in srgb, #ffffff 86%, #f48fb3);
+  --ggpr-rule: color-mix(in srgb, #ffffff 92%, transparent);
+  --ggpr-accent: #ec4f85;
+  --ggpr-desk: #2a1520;
+  --ggpr-desk-text: #fbe3ec;
+  --ggpr-desk-muted: color-mix(in srgb, #fbe3ec 65%, transparent);
+  --ggpr-button: #ec4f85;
+  --ggpr-button-text: #ffffff;
+  --ggpr-shadow: 0 18px 50px color-mix(in srgb, #000000 45%, transparent);
+}
 /* GGS Feed slide 27 (3:4): Hari Pahlawan promo palette (cream to match the painted still life). */
 .ggph-root {
   --ggph-ink: #3a0d1c;
